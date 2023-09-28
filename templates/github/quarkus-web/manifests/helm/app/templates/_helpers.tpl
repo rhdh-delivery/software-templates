@@ -45,6 +45,7 @@ helm.sh/chart: {{ include "quarkus-template.chart" . }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
+app.openshift.io/runtime: quarkus
 {{- end }}
 
 {{/*
